@@ -37,7 +37,6 @@ const Wrapper = styled.div`
   height: 100%;
   overflow: hidden;
   min-height: 300px;
-  background-color: #000;
   color: white;
   box-sizing: border-box;
   * {
