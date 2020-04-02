@@ -653,7 +653,7 @@ export default class VideoRecorder extends Component {
             src={this.state.videoUrl}
             loop
             muted={isReplayVideoMuted}
-            playsInline
+            playsInline={false}
             autoPlay={!replayVideoAutoplayAndLoopOff}
             controls={showReplayControls}
             onClick={this.handleReplayVideoClick}
