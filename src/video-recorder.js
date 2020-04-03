@@ -58,7 +58,7 @@ const Video = styled.video`
   min-width: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   ${props =>
     props.isFlipped &&
     css`
@@ -645,24 +645,24 @@ export default class VideoRecorder extends Component {
       />
     ) : null
 
-    if (isReplayingVideo) {
-      return (
-        <CameraView key='replay'>
-          <Video
-            ref={el => (this.replayVideo = el)}
-            src={this.state.videoUrl}
-            loop
-            muted={isReplayVideoMuted}
-            playsInline={false}
-            autoPlay={!replayVideoAutoplayAndLoopOff}
-            controls={showReplayControls}
-            onClick={this.handleReplayVideoClick}
-            onDurationChange={this.handleDurationChange}
-          />
-          {videoInput}
-        </CameraView>
-      )
-    }
+    // if (isReplayingVideo) {
+    //   return (
+    //     <CameraView key='replay'>
+    //       <Video
+    //         ref={el => (this.replayVideo = el)}
+    //         src={this.state.videoUrl}
+    //         loop
+    //         muted={isReplayVideoMuted}
+    //         playsInline={false}
+    //         autoPlay={!replayVideoAutoplayAndLoopOff}
+    //         controls={showReplayControls}
+    //         onClick={this.handleReplayVideoClick}
+    //         onDurationChange={this.handleDurationChange}
+    //       />
+    //       {videoInput}
+    //     </CameraView>
+    //   )
+    // }
 
     if (shouldUseVideoInput) {
       return renderVideoInputView({ videoInput })
